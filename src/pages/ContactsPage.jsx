@@ -1,8 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FiMapPin, FiPhone, FiMail, FiClock } from "react-icons/fi";
-import officeImage from "../assets/contact-office.jpg"; // Replace with your image
-import { Link } from "react-router-dom";
+import bgImage from "../assets/bg_image.png"; // Same as home page
+import officeImage from "../assets/contact-office.jpg";
+import Footer from "../components/Footer";
 
 const ContactsPage = () => {
   const contactMethods = [
@@ -14,46 +15,53 @@ const ContactsPage = () => {
     {
       icon: <FiPhone className="text-xl text-bright-orange" />,
       title: "Phone",
-      details: "+25192077263"
+      details: "+1 (555) 123-4567"
     },
     {
       icon: <FiMail className="text-xl text-bright-orange" />,
       title: "Email",
-      details: "eyueljoel21@gmail.com"
+      details: "info@virtualoffice.com"
     },
     {
       icon: <FiClock className="text-xl text-bright-orange" />,
       title: "Working Hours",
-      details: "Mon-Fri: 9AM - 6PM (LT)"
+      details: "Mon-Fri: 9AM - 6PM (PST)"
     }
   ];
 
   return (
-    <div className="bg-gray-900 text-white min-h-screen">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.h1 
-            className="text-4xl md:text-5xl font-bold mb-4"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            Get in <span className="text-bright-orange">Touch</span>
-          </motion.h1>
-          <motion.p 
-            className="text-xl text-gray-300 max-w-2xl mx-auto"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-          >
-            We'd love to hear from you. Reach out to our team anytime.
-          </motion.p>
-        </div>
-      </section>
+    <div className="relative min-h-screen flex flex-col">
+      {/* Background (same as home page) */}
+      <div
+        className="fixed inset-0 -z-10"
+        style={{
+          backgroundImage: `url(${bgImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      />
+      <div className="fixed inset-0 -z-10 bg-black/50" />
 
-      {/* Contact Content */}
-      <section className="pb-20 px-4 sm:px-6 lg:px-8">
+
+      {/* Main Content */}
+      <div className="flex-grow px-4 sm:px-6 lg:px-8 py-12">
+        {/* Hero Section */}
+        <motion.section 
+          className="max-w-7xl mx-auto text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <h1 className="text-4xl md:text-5xl  text-white font-bold mb-4">
+            Contact <span className="text-bright-orange">Us</span>
+          </h1>
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            We're here to help and answer any questions you might have
+          </p>
+        </motion.section>
+
+        {/* Contact Content */}
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
           {/* Contact Information */}
           <motion.div
@@ -61,9 +69,9 @@ const ContactsPage = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-2xl font-bold mb-8">Contact Information</h2>
+            <h2 className="text-2xl font-bold mb-8">Our Offices</h2>
             
-            <div className="space-y-6">
+            <div className="space-y-6 mb-12">
               {contactMethods.map((method, index) => (
                 <motion.div 
                   key={index}
@@ -80,7 +88,7 @@ const ContactsPage = () => {
               ))}
             </div>
 
-            <div className="mt-12">
+            <div>
               <h3 className="text-xl font-bold mb-4">Follow Us</h3>
               <div className="flex gap-4">
                 {['Twitter', 'LinkedIn', 'Facebook'].map((social, index) => (
@@ -103,54 +111,56 @@ const ContactsPage = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="bg-gray-800/50 p-8 rounded-xl border border-gray-700">
-              <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
+            <div className="bg-orange-400/50 p-8 rounded-xl border border-gray-700">
+              <h2 className="text-2xl font-bold text-white mb-6">Send a Message</h2>
               
               <form className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-2">
-                    Full Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:border-bright-orange focus:ring-1 focus:ring-bright-orange outline-none transition"
-                    placeholder="Your name"
-                  />
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="name" className="block text-sm text-white font-medium mb-2">
+                      Full Name
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      className="w-full px-4 py-3 bg-orange-300/50 border border-gray-700 rounded-lg focus:border-bright-orange focus:ring-1 focus:ring-bright-orange outline-none transition"
+                      placeholder="Your name"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="email" className="block text-sm text-white font-medium mb-2">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      className="w-full px-4 py-3 bg-orange-300/50 border border-gray-700 rounded-lg focus:border-bright-orange focus:ring-1 focus:ring-bright-orange outline-none transition"
+                      placeholder="your.email@example.com"
+                    />
+                  </div>
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-2">
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:border-bright-orange focus:ring-1 focus:ring-bright-orange outline-none transition"
-                    placeholder="your.email@example.com"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium mb-2">
+                  <label htmlFor="subject" className="block text-sm text-white font-medium mb-2">
                     Subject
                   </label>
                   <input
                     type="text"
                     id="subject"
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:border-bright-orange focus:ring-1 focus:ring-bright-orange outline-none transition"
+                    className="w-full px-4 py-3 bg-orange-300/50 border border-gray-700 rounded-lg focus:border-bright-orange focus:ring-1 focus:ring-bright-orange outline-none transition"
                     placeholder="How can we help?"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-2">
+                  <label htmlFor="message" className="block text-sm text-white font-medium mb-2">
                     Message
                   </label>
                   <textarea
                     id="message"
                     rows="4"
-                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:border-bright-orange focus:ring-1 focus:ring-bright-orange outline-none transition"
+                    className="w-full px-4 py-3 bg-orange-300/50 border border-gray-700 rounded-lg focus:border-bright-orange focus:ring-1 focus:ring-bright-orange outline-none transition"
                     placeholder="Your message..."
                   ></textarea>
                 </div>
@@ -167,26 +177,10 @@ const ContactsPage = () => {
             </div>
           </motion.div>
         </div>
-      </section>
+      </div>
 
-      {/* Office Image */}
-      <section className="px-4 sm:px-6 lg:px-8 pb-20">
-        <div className="max-w-7xl mx-auto">
-          <motion.div 
-            className="rounded-xl overflow-hidden"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <img 
-              src={officeImage} 
-              alt="Our Office" 
-              className="w-full h-auto max-h-[500px] object-cover"
-            />
-          </motion.div>
-        </div>
-      </section>
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };
