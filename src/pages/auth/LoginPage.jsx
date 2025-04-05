@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../../components/NavBar';
 import Footer from '../../components/Footer';
 import bgImage from '../../assets/bg_image.png';
+import { Link } from 'react-router-dom';
 const Login = () => {
   return (
     <div 
@@ -50,6 +51,10 @@ const Login = () => {
                 >
                   forgot password?
                 </button>
+                <Link to="/register" className="text-sm text-orange-600 hover:text-orange-800 underline">
+                  Sign Up
+                
+                </Link>
               </div>
             </div>
             
