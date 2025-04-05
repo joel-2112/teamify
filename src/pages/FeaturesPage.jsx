@@ -87,6 +87,8 @@ const FeaturesPage = () => {
       />
       <div className="fixed inset-0 -z-10 bg-black/50" />
 
+
+
       {/* Main Content  */}
       <div className="flex-1 flex  flex-col sm:gap-4 justify-center px-4 sm:px-6 lg:px-8 ">
         <div className="text-center mb-10">
