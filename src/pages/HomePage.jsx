@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -52,7 +52,8 @@ const HomePage = () => {
             Instant Demo
           </motion.button>
           
-          <Link to="/features" className="flex-1 min-w-[200px]">
+          <Link 
+          to="/features" className="flex-1 min-w-[200px]">
             <motion.button
               className="border border-bright-orange text-white font-medium  py-2 rounded-lg transition-all duration-300 hover:bg-orange-400/10 hover:border-orange-500 w-full"
               whileHover={{ 
