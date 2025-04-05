@@ -17,12 +17,12 @@ const Login = () => {
       <Navbar />
       
       <div className="flex-grow flex items-center justify-center p-4">
-        <div className="bg-gray-900/60 bg-opacity-90 rounded-lg shadow-xl p-8 max-w-md w-full">
-          <h1 className="text-3xl font-bold text-gray-100 mb-6">Welcome Back</h1>
+        <div className="bg-gray-100 bg-opacity-90 rounded-lg shadow-xl p-8 max-w-md w-full">
+          <h1 className="text-3xl font-bold text-gray-800 mb-6">Welcome Back</h1>
           
           <form className="space-y-6">
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-white mb-1">
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
                 Enter Your Email
               </label>
               <input
@@ -34,7 +34,7 @@ const Login = () => {
             </div>
             
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-white mb-1">
+              <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1">
                 Enter Your Password
               </label>
               <input
@@ -43,10 +43,10 @@ const Login = () => {
                 className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
                 placeholder="type your password"
               />
-              <div className="flex items-center justify-end mt-1">
+              <div className="flex items-center justify-between mt-1">
                 <button 
                   type="button" 
-                  className="text-sm text-bright-orange hover:text-orange-800 underline"
+                  className="text-sm text-orange-600 hover:text-orange-800 underline"
                 >
                   forgot password?
                 </button>
@@ -61,9 +61,9 @@ const Login = () => {
             </button>
           </form>
           
-          <p className="mt-6 text-xs text-white text-center">
+          <p className="mt-6 text-xs text-gray-600 text-center">
             By proceeding you are agreeing to the <br />
-            <a href="#" className="text-bright-orange hover:underline">Terms & Conditions</a> and <a href="#" className="text-bright-orange hover:underline">Privacy Policy</a>
+            <a href="#" className="text-orange-600 hover:underline">Terms & Conditions</a> and <a href="#" className="text-orange-600 hover:underline">Privacy Policy</a>
           </p>
         </div>
       </div>

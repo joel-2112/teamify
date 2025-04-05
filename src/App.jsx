@@ -7,6 +7,7 @@ import ContactsPage from './pages/ContactsPage';
 import AboutPage from './pages/AboutsPage';
 import SubscriptionPlan from './pages/SubscriptionPlan';
 import LoginPage from './pages/auth/LoginPage';
+import RegisterPage from './pages/auth/RegisterPage';
 const appRoutes = [
   { path: '/', element: <HomePage />, exact: true },
   { path: '/features', element: <FeaturesPage /> },
@@ -19,6 +20,7 @@ const App = () => {
     <BrowserRouter>
       <Routes>
    <Route path="/login" element={<LoginPage />}/>
+   <Route path="/register" element={<RegisterPage />}/>
    <Route path="/subscription" element={<SubscriptionPlan />}/>
         {/* Define the main layout route */}
         <Route element={<Layout />}>
