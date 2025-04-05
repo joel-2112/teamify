@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FiCheck } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const PlanSummary = ({ 
   title,
@@ -42,12 +43,15 @@ const PlanSummary = ({
           ))}
         </ul>
       </div>
-
+    <Link 
+     to="/register"
+    >
       <button
         className="w-full bg-orange-500 hover:bg-orange-600 text-white font-medium py-3 px-4 rounded-lg transition duration-200"
-      >
+        >
         Continue to Payment
       </button>
+          </Link>
     </motion.div>
   );
 };
