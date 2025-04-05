@@ -63,8 +63,8 @@ const NavBar = () => {
           {/* Sign In Button (Desktop) */}
           <div className="hidden md:block">
             <Link 
-              to="/signin" 
-              onClick={() => setActivePath('/signin')}
+              to="/login" 
+              onClick={() => setActivePath('/login')}
             >
               <button className="bg-bright-orange text-white px-4 py-1 rounded-md hover:bg-orange-500 transition-colors">
                 Sign In
@@ -113,9 +113,9 @@ const NavBar = () => {
             })}
             <div className="pt-4 pb-2">
               <Link
-                to="/signin"
+                to="/login"
                 onClick={() => {
-                  setActivePath('/signin');
+                  setActivePath('/login');
                   setMobileMenuOpen(false);
                 }}
                 className="block w-full px-3 py-2 bg-bright-orange text-white text-center rounded-md hover:bg-orange-600 transition-colors"

@@ -6,7 +6,7 @@ import FeaturesPage from './pages/FeaturesPage';
 import ContactsPage from './pages/ContactsPage';
 import AboutPage from './pages/AboutsPage';
 import SubscriptionPlan from './pages/SubscriptionPlan';
-
+import LoginPage from './pages/auth/LoginPage';
 const appRoutes = [
   { path: '/', element: <HomePage />, exact: true },
   { path: '/features', element: <FeaturesPage /> },
@@ -18,8 +18,8 @@ const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-   <Route path="/subscription-plan" element={<SubscriptionPlan />}/>
-   <Route path="/login" element={<SubscriptionPlan />}/>
+   <Route path="/login" element={<LoginPage />}/>
+   <Route path="/subscription" element={<SubscriptionPlan />}/>
         {/* Define the main layout route */}
         <Route element={<Layout />}>
           {appRoutes.map((route) => (
