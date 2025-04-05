@@ -64,10 +64,10 @@ const AboutsPage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
             About <span className="text-bright-orange">Our Company</span>
           </h1>
-          <p className="text-xl md:text-2xl max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl max-w-3xl mx-auto text-white">
             Pioneering virtual collaboration since 2015
           </p>
         </motion.div>
@@ -97,7 +97,7 @@ const AboutsPage = () => {
                   <div className="text-bright-orange mb-4 flex justify-center">
                     <IconComponent className="text-3xl" />
                   </div>
-                  <h3 className="text-3xl font-bold mb-2">{stat.value}</h3>
+                  <h3 className="text-3xl font-bold text-gray-50 mb-2">{stat.value}</h3>
                   <p className="text-gray-300">{stat.label}</p>
                 </motion.div>
               );
@@ -115,7 +115,7 @@ const AboutsPage = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
               Our <span className="text-bright-orange">Story</span>
             </h2>
             <p className="text-lg text-gray-300 mb-6">
@@ -165,7 +165,7 @@ const AboutsPage = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-200">
               Our <span className="text-bright-orange">Core Values</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -203,7 +203,7 @@ const AboutsPage = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-100">
             Ready to Transform Your{" "}
             <span className="text-bright-orange">Team Collaboration</span>?
           </h2>
