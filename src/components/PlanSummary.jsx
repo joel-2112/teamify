@@ -43,27 +43,6 @@ const PlanSummary = ({
         </ul>
       </div>
 
-      <div className="mb-6">
-        <h3 className="text-sm font-medium text-gray-400 mb-2">Billing Cycle</h3>
-        <div className="flex bg-gray-700 rounded-lg p-1">
-          <span className={`flex-1 py-2 text-center text-sm font-medium ${
-            !isYearly ? 'bg-orange-500 text-white' : 'text-gray-300'
-          } rounded-md`}>
-            Monthly
-          </span>
-          <span className={`flex-1 py-2 text-center text-sm font-medium relative ${
-            isYearly ? 'bg-orange-500 text-white' : 'text-gray-300'
-          } rounded-md`}>
-            Yearly
-            {isYearly && (
-              <span className="absolute -top-2 -right-2 bg-orange-700 text-white text-xs px-1.5 py-0.5 rounded-full">
-                Save 60%
-              </span>
-            )}
-          </span>
-        </div>
-      </div>
-
       <button
         className="w-full bg-orange-500 hover:bg-orange-600 text-white font-medium py-3 px-4 rounded-lg transition duration-200"
       >
