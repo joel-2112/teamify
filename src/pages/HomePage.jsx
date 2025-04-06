@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const HomePage = () => {
   return (
-    <div className="flex flex-col items-center justify-between min-h-[calc(100vh-160px)] px-4 sm:px-6 lg:px-8 py-12">
+    <div className="flex flex-col items-center justify-around min-h-[calc(100vh-160px)] px-4 sm:px-6 lg:px-8 py-12">
       {/* Welcome Text Section */}
       <motion.div 
         className="text-center w-full max-w-4xl"
@@ -45,7 +45,7 @@ const HomePage = () => {
       >
         <div className="flex flex-col sm:flex-row justify-between items-center gap-6 sm:gap-8">
           <motion.button
-            className="bg-bright-orange hover:bg-orange-600 text-white font-medium  py-2  rounded-md transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/30 flex-1 "
+            className="bg-bright-orange hover:bg-orange-600 text-white font-medium  py-2 px-2 rounded-md transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/30 flex-1 "
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
           >

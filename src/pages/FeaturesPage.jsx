@@ -74,7 +74,7 @@ const FeaturesPage = () => {
   };
 
   return (
-    <div className="relative lg:h-screen flex  flex-col overflow-hidden">
+    <div className="relative lg:h-screen items-center justify-center flex  flex-col overflow-hidden">
       {/* Background */}
       <div
         className="fixed inset-0 -z-10"
@@ -90,7 +90,7 @@ const FeaturesPage = () => {
 
 
       {/* Main Content  */}
-      <div className="flex-1 flex  flex-col sm:gap-4 justify-center px-4 sm:px-6 lg:px-8 ">
+      <div className="flex-1 flex  flex-col sm:gap-4 justify-center items-center px-4 sm:px-6 lg:px-8 ">
         <div className="text-center mb-10">
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
             Flexible <span className="text-bright-orange">Plans</span>
@@ -128,7 +128,7 @@ const FeaturesPage = () => {
         </div>
 
         {/* Plan Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 sm:gap-4 lg:gap-8 max-w-5xl mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 sm:gap-8 gap-8 lg:gap-8 max-w-5xl mx-auto px-4">
           {getPlans().map((plan, index) => (
             <div key={index} >
               <PlanCard

@@ -212,7 +212,7 @@ const AboutsPage = () => {
             platform.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link to="/subscription-plan">
+            <Link to="/features">
               <motion.button
                 className="bg-bright-orange hover:bg-orange-600 text-white font-medium px-8 py-3 rounded-lg transition-all w-full sm:w-auto"
                 whileHover={{ scale: 1.05 }}

@@ -1,29 +1,33 @@
-import React from 'react';
-import Navbar from '../../components/NavBar';
-import Footer from '../../components/Footer';
-import bgImage from '../../assets/bg_image.png';
-import { Link } from 'react-router-dom';
+import React from "react";
+import Navbar from "../../components/NavBar";
+import Footer from "../../components/Footer";
+import bgImage from "../../assets/bg_image.png";
+import { Link } from "react-router-dom";
 const Login = () => {
   return (
-    <div 
+    <div
       className="min-h-screen flex flex-col t"
-    
-              style={{
-                backgroundImage: `url(${bgImage})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-              }}
+      style={{
+        backgroundImage: `url(${bgImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
     >
       <Navbar />
-      
+
       <div className="flex-grow flex items-center justify-center p-4">
         <div className="bg-gray-100 bg-opacity-90 rounded-lg shadow-xl p-8 max-w-md w-full">
-          <h1 className="text-3xl font-bold text-gray-800 mb-6">Welcome Back</h1>
-          
+          <h1 className="text-3xl font-bold text-gray-800 mb-6">
+            Welcome Back
+          </h1>
+
           <form className="space-y-6">
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium text-gray-700 mb-1"
+              >
                 Enter Your Email
               </label>
               <input
@@ -33,9 +37,12 @@ const Login = () => {
                 placeholder="example@email.com"
               />
             </div>
-            
+
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1">
+              <label
+                htmlFor="password"
+                className="block text-sm font-medium text-gray-700 mb-1"
+              >
                 Enter Your Password
               </label>
               <input
@@ -45,34 +52,46 @@ const Login = () => {
                 placeholder="type your password"
               />
               <div className="flex items-center justify-between mt-1">
-                <button 
-                  type="button" 
+                <button
+                  type="button"
                   className="text-sm text-orange-600 hover:text-orange-800 underline"
                 >
                   forgot password?
                 </button>
-                <Link to="/register" className="text-sm text-orange-600 hover:text-orange-800 underline">
+                <Link
+                  to="/register"
+                  className="text-sm text-orange-600 hover:text-orange-800 underline"
+                >
                   Sign Up
-                
                 </Link>
               </div>
             </div>
-            
-            <button
-              type="submit"
-              className="w-full bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 px-4 rounded-md transition duration-300"
+            <Link
+            to="/"
+            className="block"
             >
-              Continue
-            </button>
+              <button
+                type="submit"
+                className="w-full bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 px-4 rounded-md transition duration-300"
+              >
+                Continue
+              </button>
+            </Link>
           </form>
-          
+
           <p className="mt-6 text-xs text-gray-600 text-center">
             By proceeding you are agreeing to the <br />
-            <a href="#" className="text-orange-600 hover:underline">Terms & Conditions</a> and <a href="#" className="text-orange-600 hover:underline">Privacy Policy</a>
+            <a href="#" className="text-orange-600 hover:underline">
+              Terms & Conditions
+            </a>{" "}
+            and{" "}
+            <a href="#" className="text-orange-600 hover:underline">
+              Privacy Policy
+            </a>
           </p>
         </div>
       </div>
-      
+
       <Footer />
     </div>
   );
